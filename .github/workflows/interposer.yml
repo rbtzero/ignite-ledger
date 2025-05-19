@@ -12,7 +12,7 @@ jobs:
           python-version: '3.11'
       - name: Assert ΔT threshold
         run: |
-          python - <<'PY'
+          cat <<'PY' | python -
 import interposer_estimator as ie
 d = ie.delta_t(600, 2)
 print(f"Computed ΔT = {d:.2f} °C")
