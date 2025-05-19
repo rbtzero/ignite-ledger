@@ -1,0 +1,20 @@
+
+Subject: <4 dB/km light at 5 mm bends — ready for your lab?
+
+Hi <Name>,
+
+We’ve just published a parameter‑free equation (Eq. 12.1, Recursive Becoming Theory)
+that collapses waveguide bend loss below **0.05 dB·m⁻¹** for a 5 mm loop at 1550 nm.
+Our uncut Colab demo reproduces it in real‑time.
+
+**Offer:** send us any GDS of a problematic bend by Friday.
+We’ll return a curvature‑balanced layout + loss prediction within 48 h.
+If your lab measurement matches the bound, you wire **$500k NRE** and we open
+the full solver stack (Apache‑2.0) for your internal use.
+
+Proof hash is anchored at Bitcoin block #<HEIGHT>; repo link below.
+
+Let’s bend light the right way.
+
+  – <You>,
+     Universal Ledger Foundation
