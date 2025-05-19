@@ -20,10 +20,4 @@ jobs:
           echo "LOSS=$LOSS" >> $GITHUB_ENV
       - name: Assert bend-loss threshold
         run: |
-          python - <<'PY'
-          import os
-          loss = float(os.environ['LOSS'])
-          if loss > 0.05:
-              raise RuntimeError(f'FAIL: loss={loss} dB/m')
-          print(f'PASS: loss={loss} dB/m')
-          PY 
+          python -c 'import os, sys; loss=float(os.environ["LOSS"]); assert loss<=0.05, f"FAIL: loss={loss} dB/m"; print(f"PASS: loss={loss} dB/m")' 
