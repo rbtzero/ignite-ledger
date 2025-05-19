@@ -17,6 +17,10 @@ This repository is the **public, immutable starting point** for the Recursive Be
 
 ▶ [Uncut demo video](https://youtu.be/OJpLFGMwim8)
 
+![Interposer CI](https://github.com/rbtzero/ignite-ledger/actions/workflows/interposer.yml/badge.svg)
+
+▶ [Uncut interposer demo](https://youtu.be/6dMowP_vEXM)
+
 ```bash
 python curvature_solver.py --radius_mm 5 --wavelength_nm 1550
 ```
