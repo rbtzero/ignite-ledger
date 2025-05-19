@@ -10,13 +10,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Run estimator
-        run: |
-          python - <<'PY'
-from interposer_estimator import delta_t
-power, length = 600, 2
-dT = delta_t(power, length)
-print(f"Computed ΔT = {dT:.2f} °C")
-assert dT >= 5.0, f"FAIL: ΔT too small (ΔT={dT:.2f})"
-print("PASS: ΔT adequate")
-PY 
+      - name: Assert ΔT threshold
+        run: python -c "import interposer_estimator as ie, sys; d=ie.delta_t(600,2); print(f'DeltaT={d:.2f}'); assert d>=5.0, f'FAIL: ΔT too small ({d})'" 
