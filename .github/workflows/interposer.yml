@@ -12,13 +12,11 @@ jobs:
           python-version: '3.11'
       - name: Run estimator
         run: |
-          python interposer_estimator.py --power_w 600 --trace_len_m 2 > out.txt
-          cat out.txt
           python - <<'PY'
-import re, sys
-with open('out.txt') as f:
-    txt = f.read()
-m = re.search(r"ΔT = ([0-9.]+)", txt)
-assert m and float(m.group(1)) >= 5.0, "FAIL: ΔT too small"
-print('PASS: ΔT adequate')
+from interposer_estimator import delta_t
+power, length = 600, 2
+dT = delta_t(power, length)
+print(f"Computed ΔT = {dT:.2f} °C")
+assert dT >= 5.0, f"FAIL: ΔT too small (ΔT={dT:.2f})"
+print("PASS: ΔT adequate")
 PY 
