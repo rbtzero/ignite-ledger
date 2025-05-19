@@ -1,6 +1,6 @@
 # Ignite-Ledger Bootstrap
 ![CI](https://github.com/rbtzero/ignite-ledger/actions/workflows/bendloss.yml/badge.svg)
-![ΔT](https://github.com/rbtzero/ignite-ledger/actions/workflows/interposer.yml/badge.svg)
+![ΔT](https://github.com/rbtzero/ignite-ledger/actions/workflows/interposer.yml/badge.svg?branch=main)
 
 This repository is the **public, immutable starting point** for the Recursive Becoming Theory (RBT) engineering stack.
 
