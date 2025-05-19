@@ -13,10 +13,10 @@ jobs:
       - name: Assert ΔT threshold
         run: |
           python - <<'PY'
-          import interposer_estimator as ie
-          d = ie.delta_t(600, 2)
-          print(f"Computed ΔT = {d:.2f} °C")
-          if d < 5.0:
-              raise SystemExit(f"FAIL: ΔT too small ({d:.2f})")
-          print("PASS: ΔT adequate")
-          PY 
+import interposer_estimator as ie
+d = ie.delta_t(600, 2)
+print(f"Computed ΔT = {d:.2f} °C")
+if d < 5.0:
+    raise SystemExit(f"FAIL: ΔT too small ({d:.2f})")
+print("PASS: ΔT adequate")
+PY 
