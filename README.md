@@ -14,6 +14,8 @@ This repository is the **public, immutable starting point** for the Recursive Be
 
 ## Quick start
 
+▶ [Uncut demo video](@https://www.youtube.com/watch?v=LTANAWfBLGQ )
+
 ```bash
 python curvature_solver.py --radius_mm 5 --wavelength_nm 1550
 ```
