@@ -15,7 +15,7 @@ jobs:
         run: pip install -r requirements.txt || true  # none yet
       - name: Run curvature solver
         run: |
-          LOSS=$(python curvature_solver.py --radius_mm 5 | grep -oE "[0-9.eE-]+" | head -n1)
+          LOSS=$(python curvature_solver.py --radius_mm 5 | grep -oE "[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?" | head -n1)
           echo "Loss = $LOSS dB/m"
           echo "LOSS=$LOSS" >> $GITHUB_ENV
       - name: Assert bend-loss threshold
