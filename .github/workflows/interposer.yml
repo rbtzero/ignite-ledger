@@ -12,7 +12,7 @@ jobs:
           python-version: '3.11'
       - name: Run estimator
         run: |
-          python interposer_estimator.py --power_w 600 --trace_len_m 0.05 > out.txt
+          python interposer_estimator.py --power_w 600 --trace_len_m 2 > out.txt
           cat out.txt
           python - <<'PY'
 import re, sys
