@@ -53,7 +53,7 @@ Predicted ΔT = 6.00 °C   ✅ swap recommended
 
 ### LedgerOpt max-flow demo
 
-▶ [Uncut LedgerOpt demo](https://youtu.be/vKBV2x-s1ds)
+▶ [Uncut LedgerOpt demo](https://youtu.be/vVZ4NJ29y9w)
 
 ## Licence
 
