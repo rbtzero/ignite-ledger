@@ -47,6 +47,14 @@ Expected output:
 Predicted ΔT = 6.00 °C   ✅ swap recommended
 ```
 
+---
+
+![LedgerOpt CI](https://github.com/rbtzero/ignite-ledger/actions/workflows/ledgeropt.yml/badge.svg)
+
+### LedgerOpt max-flow demo
+
+▶ [Uncut LedgerOpt demo](https://youtu.be/vKBV2x-s1ds)
+
 ## Licence
 
 Everything in this repo is released under **Apache 2.0**.  The underlying mathematics is public‑domain (CC0).
