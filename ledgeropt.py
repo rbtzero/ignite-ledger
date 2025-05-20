@@ -25,24 +25,52 @@ def ledger_max_flow(nodes: List[int], edges: List[Edge], src: int, sink: int) ->
     Returns:
         Integer max-flow value.
     """
-    # Build adjacency list and capacity lookup
+    # Build residual graph
     adj: Dict[int, List[int]] = {n: [] for n in nodes}
-    cap: Dict[Tuple[int, int], int] = {}
+    capacity: Dict[Tuple[int, int], int] = {}
     for u, v, c in edges:
         adj[u].append(v)
-        cap[(u, v)] = c
+        adj[v].append(u)  # add reverse edge for residual
+        capacity[(u, v)] = c
+        capacity.setdefault((v, u), 0)
 
-    # Ledger dynamic-programming frontier starting from sink
-    frontier: Dict[int, float] = {sink: math.inf}
+    max_flow = 0
 
-    # Process nodes in reverse order of appearance (works for small demo DAG)
-    for v in reversed(nodes):
-        if v == sink:
-            continue
-        cuts = [min(cap.get((v, w), 0), frontier[w]) for w in adj[v] if w in frontier]
-        frontier[v] = max(cuts) if cuts else 0
+    while True:
+        # BFS to find augmenting path
+        parent = {src: None}
+        queue = [src]
+        while queue and sink not in parent:
+            cur = queue.pop(0)
+            for nxt in adj[cur]:
+                if nxt not in parent and capacity[(cur, nxt)] > 0:
+                    parent[nxt] = cur
+                    queue.append(nxt)
+                    if nxt == sink:
+                        break
 
-    return int(frontier[src])
+        if sink not in parent:
+            break  # no augmenting path
+
+        # Determine bottleneck
+        path_flow = math.inf
+        v = sink
+        while v != src:
+            u = parent[v]
+            path_flow = min(path_flow, capacity[(u, v)])
+            v = u
+
+        # Update residual capacities
+        v = sink
+        while v != src:
+            u = parent[v]
+            capacity[(u, v)] -= path_flow
+            capacity[(v, u)] += path_flow
+            v = u
+
+        max_flow += path_flow
+
+    return int(max_flow)
 
 
 if __name__ == "__main__":
