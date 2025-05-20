@@ -16,17 +16,4 @@ jobs:
         run: |
           python ledgeropt.py --json demo_flow.json > out.txt
           echo "LedgerOpt output:" && cat out.txt
-          python - <<'PY'
-import json, networkx as nx, re, pathlib, sys
-with open('demo_flow.json') as f:
-    d = json.load(f)
-G = nx.DiGraph()
-for u,v,c in d['edges']:
-    G.add_edge(u, v, capacity=c)
-val, _ = nx.maximum_flow(G, d['src'], d['sink'])
-with open('out.txt') as f:
-    m = re.search(r"(\d+)", f.read())
-ledger = int(m.group(1)) if m else None
-assert ledger == val, f"Mismatch: LedgerOpt={ledger}, NetworkX={val}"
-print(f"PASS: flow={ledger}")
-PY 
+          python -c "import json, re, networkx as nx, sys; d=json.load(open('demo_flow.json')); G=nx.DiGraph(); [G.add_edge(u,v,capacity=c) for u,v,c in d['edges']]; val,_=nx.maximum_flow(G,d['src'],d['sink']); ledger=int(re.search(r'(\d+)', open('out.txt').read()).group(1)); assert ledger==val, f'Mismatch {ledger}!={val}'; print(f'PASS: flow={ledger}')" 
