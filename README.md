@@ -15,11 +15,9 @@ This repository is the **public, immutable starting point** for the Recursive Be
 
 ## Quick start
 
-▶ [Uncut demo video](https://youtu.be/OJpLFGMwim8)
+### Curvature-loss demo
 
-![Interposer CI](https://github.com/rbtzero/ignite-ledger/actions/workflows/interposer.yml/badge.svg)
-
-▶ [Uncut interposer demo](https://youtu.be/6dMowP_vEXM)
+▶ [Uncut curvature demo](https://youtu.be/OJpLFGMwim8)
 
 ```bash
 python curvature_solver.py --radius_mm 5 --wavelength_nm 1550
@@ -29,6 +27,24 @@ Expected output:
 
 ```
 Predicted bend loss ≤ 0.049 dB·m⁻¹  ✅
+```
+
+---
+
+![Interposer CI](https://github.com/rbtzero/ignite-ledger/actions/workflows/interposer.yml/badge.svg)
+
+### Self-cooling interposer demo
+
+▶ [Uncut interposer demo](https://youtu.be/6dMowP_vEXM)
+
+```bash
+python interposer_estimator.py --power_w 600 --trace_len_m 2
+```
+
+Expected output:
+
+```
+Predicted ΔT = 6.00 °C   ✅ swap recommended
 ```
 
 ## Licence
