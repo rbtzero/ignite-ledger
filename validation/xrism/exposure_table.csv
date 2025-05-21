@@ -1,4 +1,7 @@
-cluster,exposure_ks,expected_sigma
-Perseus,30,6.4
-Coma,50,5.8
-Centaurus,40,5.5 
+cluster,energy_keV,exposure_ks,expected_sigma
+Perseus,3.540,30,6.4
+Perseus,2.800,30,4.7
+Coma,3.540,50,5.8
+Coma,2.800,50,4.3
+Centaurus,3.540,40,5.5
+Centaurus,2.800,40,4.1 

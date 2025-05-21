@@ -3,15 +3,24 @@ from astropy.io import fits
 import pathlib
 
 np.random.seed(42)
-N = 15_000  # ~30 ks dummy file
-E_line = 3.54 + 0.005*np.random.randn(N//10)   # 3.54 keV line
-E_cont = 1. + 9.0*np.random.rand(N - len(E_line))
-energies = np.concatenate([E_line, E_cont])
+line_fraction_354 = 0.10      # 3.54 keV
+line_fraction_280 = line_fraction_354 * 0.74
+
+N  = 15_000
+N54 = int(N*line_fraction_354)
+N28 = int(N*line_fraction_280)
+
+E_354 = 3.54 + 0.005*np.random.randn(N54)
+E_280 = 2.80 + 0.005*np.random.randn(N28)
+E_cont = 1.   + 9.0*np.random.rand(N - N54 - N28)
+
+energies = np.concatenate([E_354, E_280, E_cont])
 
 theta = np.random.uniform(0, 2*np.pi, N)
-r_line = np.random.uniform(30, 80, len(E_line))
+x54 = np.random.uniform(30, 80, len(E_354))
+r28 = np.random.uniform(30, 80, len(E_280))
 r_cont = np.random.uniform(0, 110, len(E_cont))
-radii = np.concatenate([r_line, r_cont])
+radii = np.concatenate([x54, r28, r_cont])
 
 x = radii*np.cos(theta)
 y = radii*np.sin(theta)
