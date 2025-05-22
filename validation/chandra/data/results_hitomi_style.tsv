@@ -1,0 +1,168 @@
+file	energy_keV	deltaC	flux	flux_err	centroid	sigma
+read ARF file spec_std.arf
+read RMF file spec_std.rmf
+dataset 1: 0.0073:14.9504 Energy (keV)
+dataset 1: 0.0073:14.9504 -> 2.0002:14.9504 Energy (keV)
+dataset 1: 2.0002:14.9504 -> 2.0002:6.9934 Energy (keV)
+tbvabs Version 2.3
+Cosmic absorption with grains and H2, modified from
+Wilms, Allen, & McCray, 2000, ApJ 542, 914-924
+Questions: Joern Wilms
+joern.wilms@sternwarte.uni-erlangen.de
+joern.wilms@fau.de
+
+http://pulsar.sternwarte.uni-erlangen.de/wilms/research/tbabs/
+
+PLEASE NOTICE:
+To get the model described by the above paper
+you will also have to set the abundances:
+   abund wilm
+
+Note that this routine ignores the current cross section setting
+as it always HAS to use the Verner cross sections as a baseline.
+Reading APEC data from 3.0.9
+
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 9.51917e+06
+Final fit statistic   = 533.664 at function evaluation 141
+Data points           = 342
+Degrees of freedom    = 338
+Probability [Q-value] = 5.57384e-11
+Reduced statistic     = 1.57889
+Change in statistic   = 9.51864e+06
+   ap1_1.kT       0.29185      +/- 0.0171599   
+   ap1_1.norm     0.906006     +/- 0.259112    
+   ap2_1.kT       3.90357      +/- 0.0354319   
+   ap2_1.norm     0.11239      +/- 0.000794543 
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 533.664
+Final fit statistic   = 533.664 at function evaluation 151
+Data points           = 342
+Degrees of freedom    = 335
+Probability [Q-value] = 2.73846e-11
+Reduced statistic     = 1.59303
+Change in statistic   = 0
+   ap1_1.kT       0.29185      +/- 0.0172365   
+   ap1_1.norm     0.906006     +/- 0.259765    
+   ap2_1.kT       3.90357      +/- 0.0355543   
+   ap2_1.norm     0.11239      +/- 0.000802006 
+   g354.LineE     3.54         +/- 0           
+   g354.Sigma     0.03         +/- 0           
+   g354.norm      0            +/- 6.66309e-06 
+WARNING: parameter value g354.norm is at its minimum boundary 0.0
+g354.norm 	lower bound: -----
+g354.norm 	upper bound: -----
+WARNING: hard minimum hit for parameter g354.norm
+WARNING: hard maximum hit for parameter g354.norm
+Dataset               = 1
+Confidence Method     = projection
+Iterative Fit Method  = None
+Fitting Method        = levmar
+Statistic             = cstat
+projection 1-sigma (68.2689%) bounds:
+   Param            Best-Fit  Lower Bound  Upper Bound
+   -----            --------  -----------  -----------
+   g354.norm               0        -----        -----
+spec_std.pi	3.540	0.00	0.000e+00	nan	3.5400	0.0300
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 533.664
+Final fit statistic   = 528.368 at function evaluation 519
+Data points           = 342
+Degrees of freedom    = 332
+Probability [Q-value] = 3.67422e-11
+Reduced statistic     = 1.59147
+Change in statistic   = 5.29561
+   ap1_1.kT       0.293014     +/- 0.0171704   
+   ap1_1.norm     0.869822     +/- 0.259157    
+   ap2_1.kT       3.88823      +/- 0.0354401   
+   ap2_1.norm     0.112609     +/- 0.00079475  
+   g354.LineE     3.52182      +/- 0           
+   g354.Sigma     0.0258314    +/- 0           
+   g354.norm      1.15333      +/- 0           
+   g28.LineE      2.77         +/- 0           
+   g28.Sigma      0.0599993    +/- 0           
+   g28.norm       1.74883e-05  +/- 8.78274e-06 
+WARNING: parameter value g28.LineE is at its minimum boundary 2.77
+g28.norm 	lower bound: -----
+g28.norm 	upper bound: -----
+WARNING: hard minimum hit for parameter g28.norm
+WARNING: hard maximum hit for parameter g28.norm
+Dataset               = 1
+Confidence Method     = projection
+Iterative Fit Method  = None
+Fitting Method        = levmar
+Statistic             = cstat
+projection 1-sigma (68.2689%) bounds:
+   Param            Best-Fit  Lower Bound  Upper Bound
+   -----            --------  -----------  -----------
+   g28.norm      1.74883e-05        -----        -----
+spec_std.pi	2.800	5.30	1.749e-05	nan	2.7700	0.0600
+read ARF file spec_g7.arf
+read RMF file spec_g7.rmf
+dataset 1: 0.0073:14.9504 Energy (keV)
+dataset 1: 0.0073:14.9504 -> 2.0002:14.9504 Energy (keV)
+dataset 1: 2.0002:14.9504 -> 2.0002:6.9934 Energy (keV)
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 1.16122e+07
+Final fit statistic   = 2045.44 at function evaluation 590
+Data points           = 342
+Degrees of freedom    = 338
+Probability [Q-value] = 1.42085e-241
+Reduced statistic     = 6.0516
+Change in statistic   = 1.16101e+07
+   ap1_1.kT       0.008        +/- 0           
+   ap1_1.norm     8.75898      +/- 0           
+   ap2_1.kT       4.63333      +/- 0.132824    
+   ap2_1.norm     0.0055112    +/- 7.98135e-05 
+WARNING: parameter value ap1_1.kT is at its minimum boundary 0.008
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 2045.44
+Final fit statistic   = 2045.44 at function evaluation 562
+Data points           = 342
+Degrees of freedom    = 335
+Probability [Q-value] = 9.42201e-243
+Reduced statistic     = 6.1058
+Change in statistic   = 0
+   ap1_1.kT       0.008        +/- 0           
+   ap1_1.norm     8.75898      +/- 0           
+   ap2_1.kT       4.63333      +/- 0.132941    
+   ap2_1.norm     0.0055112    +/- 8.04269e-05 
+   g354.LineE     3.54         +/- 0           
+   g354.Sigma     0.03         +/- 0           
+   g354.norm      0            +/- 3.24713e-06 
+WARNING: parameter value ap1_1.kT is at its minimum boundary 0.008
+WARNING: parameter value g354.norm is at its minimum boundary 0.0
+spec_g7.pi	3.540	0.00	0.000e+00	nan	3.5400	0.0300
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 2045.44
+Final fit statistic   = 2045.44 at function evaluation 580
+Data points           = 342
+Degrees of freedom    = 332
+Probability [Q-value] = 6.16439e-244
+Reduced statistic     = 6.16097
+Change in statistic   = 4.41105e-11
+   ap1_1.kT       0.008        +/- 0           
+   ap1_1.norm     8.75898      +/- 0           
+   ap2_1.kT       4.63333      +/- 0.133983    
+   ap2_1.norm     0.0055112    +/- 8.35216e-05 
+   g354.LineE     3.54         +/- 0           
+   g354.Sigma     0.03         +/- 0           
+   g354.norm      1.2          +/- 0           
+   g28.LineE      2.8          +/- 0           
+   g28.Sigma      0.03         +/- 0           
+   g28.norm       0            +/- 3.67383e-06 
+WARNING: parameter value ap1_1.kT is at its minimum boundary 0.008
+WARNING: parameter value g28.norm is at its minimum boundary 0.0
+spec_g7.pi	2.800	0.00	0.000e+00	nan	2.8000	0.0300

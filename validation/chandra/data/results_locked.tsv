@@ -1,0 +1,76 @@
+read ARF file spec_std.arf
+read RMF file spec_std.rmf
+dataset 1: 0.0073:14.9504 Energy (keV)
+dataset 1: 0.0073:14.9504 -> 2.0002:14.9504 Energy (keV)
+dataset 1: 2.0002:14.9504 -> 2.0002:6.9934 Energy (keV)
+tbvabs Version 2.3
+Cosmic absorption with grains and H2, modified from
+Wilms, Allen, & McCray, 2000, ApJ 542, 914-924
+Questions: Joern Wilms
+joern.wilms@sternwarte.uni-erlangen.de
+joern.wilms@fau.de
+
+http://pulsar.sternwarte.uni-erlangen.de/wilms/research/tbabs/
+
+PLEASE NOTICE:
+To get the model described by the above paper
+you will also have to set the abundances:
+   abund wilm
+
+Note that this routine ignores the current cross section setting
+as it always HAS to use the Verner cross sections as a baseline.
+Reading APEC data from 3.0.9
+
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 9.51917e+06
+Final fit statistic   = 533.664 at function evaluation 141
+Data points           = 342
+Degrees of freedom    = 338
+Probability [Q-value] = 5.57384e-11
+Reduced statistic     = 1.57889
+Change in statistic   = 9.51864e+06
+   ap1_1.kT       0.29185      +/- 0.0171599   
+   ap1_1.norm     0.906006     +/- 0.259112    
+   ap2_1.kT       3.90357      +/- 0.0354319   
+   ap2_1.norm     0.11239      +/- 0.000794543 
+read ARF file spec_g7.arf
+read RMF file spec_g7.rmf
+dataset 1: 0.0073:14.9504 Energy (keV)
+dataset 1: 0.0073:14.9504 -> 2.0002:14.9504 Energy (keV)
+dataset 1: 2.0002:14.9504 -> 2.0002:6.9934 Energy (keV)
+file	energy_keV	deltaC	flux	flux_err
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 539697
+Final fit statistic   = 539697 at function evaluation 44
+Data points           = 342
+Degrees of freedom    = 339
+Probability [Q-value] = 0
+Reduced statistic     = 1592.03
+Change in statistic   = 0
+   g354.LineE     3.54         +/- 0           
+   g354.Sigma     0.03         +/- 0           
+   g354.norm      0            +/- 8.4763e-06  
+WARNING: parameter value g354.norm is at its minimum boundary 0.0
+spec_g7.pi	3.540	0.00	0.000e+00	nan
+Dataset               = 1
+Method                = levmar
+Statistic             = cstat
+Initial fit statistic = 539697
+Final fit statistic   = 539661 at function evaluation 58
+Data points           = 342
+Degrees of freedom    = 336
+Probability [Q-value] = 0
+Reduced statistic     = 1606.13
+Change in statistic   = 35.5788
+   g354.LineE     3.5378       +/- 18.873      
+   g354.Sigma     0.03         +/- 0           
+   g354.norm      2.27323e+11  +/- 0           
+   g28.LineE      2.8          +/- 0           
+   g28.Sigma      0.03         +/- 0           
+   g28.norm       0            +/- 1.06378e-05 
+WARNING: parameter value g28.norm is at its minimum boundary 0.0
+spec_g7.pi	2.800	35.58	0.000e+00	nan
